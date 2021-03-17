@@ -38,7 +38,7 @@ public class TreeGenerator : MonoBehaviour
     public void GenerateTree()
     {
         sentence = axiom;
-        origin = transform.position;
+        origin = transform.position/2048;
         position = origin;
 
         GenerateTreeLSystem();
@@ -63,6 +63,13 @@ public class TreeGenerator : MonoBehaviour
         }
         else
             meshFilter.sharedMesh = new Mesh();
+
+        //string s = "[";
+        //foreach (Vector3 v in m.vertices)
+        //{
+        //    s += v + ", ";
+        //}
+        //Debug.Log(s + "]");
     }
 
     public void GenerateSentence()

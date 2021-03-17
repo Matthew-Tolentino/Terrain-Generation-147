@@ -12,6 +12,7 @@ public static class Noise
         Vector2[] octaveOffsets = new Vector2[octaves];
         for (int i=0; i<octaves; i++)
         {
+            // If numbers are too high perlin noise will return the same thing
             float offSetX = prng.Next(-100000, 100000) + offset.x;
             float offSetY = prng.Next(-100000, 100000) + offset.y;
             octaveOffsets[i] = new Vector2(offSetX, offSetY);
